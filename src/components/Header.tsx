@@ -1,44 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTheme } from "next-themes";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
-    const [isDark, setIsDark] = useState(false);
     const { theme, setTheme } = useTheme();
 
-    useEffect(() => {
-        try {
-            const stored = localStorage.getItem("theme");
-            const prefersDark =
-                typeof window !== "undefined" &&
-                window.matchMedia &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches;
-            const theme = stored || (prefersDark ? "dark" : "light");
-            if (theme === "dark") {
-                document.documentElement.classList.add("dark");
-                setIsDark(true);
-            } else {
-                document.documentElement.classList.remove("dark");
-                setIsDark(false);
-            }
-        } catch (e) {
-            // ignore
-        }
-    }, []);
-
     const toggleTheme = () => {
-        const next = !isDark;
-        setIsDark(next);
-        try {
-            if (next) document.documentElement.classList.add("dark");
-            else document.documentElement.classList.remove("dark");
-            localStorage.setItem("theme", next ? "dark" : "light");
-        } catch (e) {
-            // ignore
-        }
+        setTheme(theme === "dark" ? "light" : "dark");
     };
 
     return (
@@ -87,7 +58,7 @@ export default function Header() {
                             onClick={toggleTheme}
                             aria-label='Toggle theme'
                             className='inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 dark:text-gray-200'>
-                            {isDark ? (
+                            {theme === "dark" ? (
                                 // Sun (light)
                                 <svg
                                     xmlns='http://www.w3.org/2000/svg'
