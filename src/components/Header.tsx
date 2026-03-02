@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [isDark, setIsDark] = useState(false);
+    const { theme, setTheme } = useTheme();
 
     useEffect(() => {
         try {
