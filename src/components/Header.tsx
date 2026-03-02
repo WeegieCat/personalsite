@@ -63,17 +63,17 @@ export default function Header() {
                             Home
                         </Link>
                         <Link
-                            href='/projects'
+                            href='/works'
                             className='text-gray-700 hover:text-blue-600 transition-colors'>
-                            Projects
+                            Works
                         </Link>
                         <Link
-                            href='/about'
+                            href='/blog'
                             className='text-gray-700 hover:text-blue-600 transition-colors'>
-                            About
+                            Blog
                         </Link>
                         <Link
-                            href='/contact'
+                            href='/inquiry'
                             className='text-gray-700 hover:text-blue-600 transition-colors'>
                             Contact
                         </Link>
@@ -159,17 +159,17 @@ export default function Header() {
                             Home
                         </Link>
                         <Link
-                            href='/projects'
+                            href='/works'
                             className='block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md'>
-                            Projects
+                            Works
                         </Link>
                         <Link
-                            href='/about'
+                            href='/blog'
                             className='block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md'>
-                            About
+                            Blog
                         </Link>
                         <Link
-                            href='/contact'
+                            href='/inquiry'
                             className='block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md'>
                             Contact
                         </Link>
