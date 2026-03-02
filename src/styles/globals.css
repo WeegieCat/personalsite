@@ -28,13 +28,20 @@ html {
 
 /* Base styles */
 body {
-    @apply bg-white text-gray-900;
+    background-color: var(--background);
+    color: var(--foreground);
     font-family:
         -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
         "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+/* Class-based dark mode override (applies when `dark` class is set on <html>) */
+.dark {
+    --background: #0f172a;
+    --foreground: #f1f5f9;
 }
 
 /* Selection */
@@ -119,6 +126,34 @@ h3 {
 
 .card {
     @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200;
+}
+
+/* Basic dark-mode adjustments for commonly used utility classes */
+.dark .card {
+    background-color: #0b1220;
+    border-color: #1f2937;
+    color: var(--foreground);
+}
+
+.dark .bg-white {
+    background-color: #0b1220 !important;
+}
+
+.dark .bg-gray-50 {
+    background-color: #071127 !important;
+}
+
+.dark .bg-gray-100 {
+    background-color: #071127 !important;
+}
+
+.dark .text-gray-900 {
+    color: var(--foreground) !important;
+}
+
+.dark .text-gray-700,
+.dark .text-gray-600 {
+    color: #cbd5e1 !important;
 }
 
 .badge {

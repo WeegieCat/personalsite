@@ -4,7 +4,7 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className='bg-gray-900 text-gray-300'>
+        <footer className='bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-300'>
             <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
                 {/* Main content */}
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-8'>
@@ -16,25 +16,25 @@ export default function Footer() {
                                     F
                                 </span>
                             </div>
-                            <span className='font-bold text-white'>
+                            <span className='font-bold text-gray-900 dark:text-white'>
                                 Feynman
                             </span>
                         </div>
-                        <p className='text-sm text-gray-400'>
+                        <p className='text-sm text-gray-600 dark:text-gray-400'>
                             Web Engineer & Creative Developer
                         </p>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className='text-white font-semibold mb-4'>
+                        <h3 className='text-gray-900 font-semibold mb-4 dark:text-white'>
                             Quick Links
                         </h3>
                         <ul className='space-y-2'>
                             <li>
                                 <Link
                                     href='/'
-                                    className='text-gray-400 hover:text-white transition-colors'>
+                                    className='text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors'>
                                     Home
                                 </Link>
                             </li>
@@ -64,14 +64,14 @@ export default function Footer() {
 
                     {/* Social Links */}
                     <div>
-                        <h3 className='text-white font-semibold mb-4'>
+                        <h3 className='text-gray-900 font-semibold mb-4 dark:text-white'>
                             Follow
                         </h3>
                         <ul className='space-y-2'>
                             <li>
                                 <a
                                     href='#'
-                                    className='text-gray-400 hover:text-white transition-colors'>
+                                    className='text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors'>
                                     GitHub
                                 </a>
                             </li>
@@ -101,20 +101,20 @@ export default function Footer() {
                 </div>
 
                 {/* Divider */}
-                <div className='border-t border-gray-800 pt-8'>
+                <div className='border-t border-gray-200 dark:border-gray-800 pt-8'>
                     <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
-                        <p className='text-sm text-gray-400'>
+                        <p className='text-sm text-gray-600 dark:text-gray-400'>
                             © {currentYear} Feynman. All rights reserved.
                         </p>
                         <div className='flex gap-6 text-sm'>
                             <Link
                                 href='#'
-                                className='text-gray-400 hover:text-white transition-colors'>
+                                className='text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors'>
                                 Privacy
                             </Link>
                             <Link
                                 href='#'
-                                className='text-gray-400 hover:text-white transition-colors'>
+                                className='text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors'>
                                 Terms
                             </Link>
                         </div>

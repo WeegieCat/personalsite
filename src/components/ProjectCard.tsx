@@ -7,10 +7,10 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
     return (
-        <div className='group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300'>
+        <div className='group bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300'>
             {/* Image */}
             {project.image && (
-                <div className='relative h-48 overflow-hidden bg-gray-100'>
+                <div className='relative h-48 overflow-hidden bg-gray-100 dark:bg-slate-700'>
                     <img
                         src={project.image}
                         alt={project.title}
@@ -21,10 +21,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
             {/* Content */}
             <div className='p-6'>
-                <h3 className='text-lg font-bold text-gray-900 mb-2'>
+                <h3 className='text-lg font-bold text-gray-900 dark:text-white mb-2'>
                     {project.title}
                 </h3>
-                <p className='text-gray-600 text-sm mb-4 line-clamp-3'>
+                <p className='text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3'>
                     {project.description}
                 </p>
 
@@ -33,14 +33,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     {project.tags.map((tag) => (
                         <span
                             key={tag}
-                            className='inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700'>
+                            className='inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-900 px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-200'>
                             {tag}
                         </span>
                     ))}
                 </div>
 
                 {/* Links */}
-                <div className='flex gap-3 pt-4 border-t border-gray-100'>
+                <div className='flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-800'>
                     {project.link && (
                         <Link
                             href={project.link}
@@ -55,7 +55,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                             href={project.github}
                             target='_blank'
                             rel='noopener noreferrer'
-                            className='flex-1 text-center px-4 py-2 bg-gray-100 text-gray-900 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium'>
+                            className='flex-1 text-center px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-sm font-medium'>
                             GitHub
                         </Link>
                     )}
